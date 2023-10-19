@@ -2,20 +2,12 @@ package com.farsousa.desafiolocadoraveiculoapi.dto;
 
 import com.farsousa.desafiolocadoraveiculoapi.models.Carro;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-
-public class CarroSaveDto {
+public class CarroUpdateDto {
 	
-	@NotBlank(message = "O atributo modelo precisa ser informado!")
 	private String modelo;
-	@NotBlank(message = "O atributo marca precisa ser informado!")
 	private String marca;
-	@NotBlank(message = "O atributo placa precisa ser informado!")
 	private String placa;
-	@NotBlank(message = "O atributo chassi precisa ser informado!")
 	private String chassi;
-	@NotNull(message = "O atributo valor da diária precisa ser informado!")
 	private Double valorDiaria;
 	
 	public Carro toEntity() {
@@ -51,8 +43,6 @@ public class CarroSaveDto {
 	}
 	public void setValorDiaria(Double valorDiaria) {
 		this.valorDiaria = valorDiaria;
-	}
-	
-	
+	}	
 
 }

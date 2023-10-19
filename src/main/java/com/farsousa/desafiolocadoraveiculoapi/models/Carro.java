@@ -1,5 +1,6 @@
 package com.farsousa.desafiolocadoraveiculoapi.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,10 +14,15 @@ public class Carro {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(nullable = false, unique = false)
 	private String modelo;
+	@Column(nullable = false, unique = false)
 	private String marca;
+	@Column(nullable = false, unique = true)
 	private String placa;
+	@Column(nullable = false, unique = true)
 	private String chassi;
+	@Column(nullable = false, unique = false)
 	private Double valorDiaria;
 	
 	public Carro() {}
@@ -27,6 +33,14 @@ public class Carro {
 		this.placa = placa;
 		this.chassi = chassi;
 		this.valorDiaria = valorDiaria;
+	}
+	
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public String getModelo() {
 		return modelo;

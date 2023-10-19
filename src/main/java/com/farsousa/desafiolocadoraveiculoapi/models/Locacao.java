@@ -27,6 +27,21 @@ public class Locacao {
     @JoinColumn(name = "carro_id")
 	private Carro carro;
 	
+	public Locacao() {}
+	
+	public Locacao(Cliente cliente, Carro carro, LocalDateTime horario, Double valorTotal, int quantidadeDias) {
+		this.cliente = cliente;
+		this.carro = carro;
+		this.horario = horario;
+		this.valorTotal = valorTotal;
+		this.quantidadeDias = quantidadeDias;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public LocalDateTime getHorario() {
 		return horario;
 	}

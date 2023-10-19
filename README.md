@@ -3,7 +3,7 @@ Este é um desafio para o Bootcamp Santander Backend Java 2023.
 ## Diagrama
 ```mermaid
 graph TD
-    locacao[Locação de Veículos]
+    locacao[LocacaoVeiculo]
     cliente{Cliente}
     carro{Carro}
     endereco{Endereço}
@@ -12,7 +12,7 @@ graph TD
     locacao --> carro
     locacao --> quantidadeDias
     locacao --> valorTotal
-    locacao --> data
+    locacao --> horario
 
     cliente --> endereco    
     cliente --> nome
@@ -29,7 +29,7 @@ graph TD
     carro --> marca
     carro --> chassi
     carro --> placa
-    carro --> diaria
+    carro --> valorDiaria
     
     
 ```
